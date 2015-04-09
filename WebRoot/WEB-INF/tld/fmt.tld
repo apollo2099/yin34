@@ -684,4 +684,22 @@ Scope of var.
 		   <rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
+	
+	
+	<tag>
+		<name>newPage</name>
+		<tag-class>com.lshop.common.tag.NewPageTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+		   <description>the URL link must be filled in, because the pagination depends on the href attribute, if this is missing, the tag cannot run correctly, the parameter 'curPage' is not nessary, you can ingore it, others cannot be missing</description>
+			<name>href</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		   <name>language</name>
+		   <required>false</required>
+		   <rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 </taglib>

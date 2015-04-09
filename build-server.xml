@@ -14,7 +14,7 @@
 	<target name="zip_server_upload_all" description="zip [*.jsp,*.class...] to zip file.">
 		<!-- copy web app files -->
 		<copy todir="${server.upload}/${app.website}">
-			<fileset dir="../${app.website}/WebContent">
+			<fileset dir="../${app.website}/WebRoot">
 			    <include name="**/*.*"/>
 				<exclude name="**/*.jar"/>
 			    <exclude name="**/*.svn"/>

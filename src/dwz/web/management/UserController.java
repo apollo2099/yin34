@@ -18,8 +18,8 @@ import dwz.framework.user.UserStatus;
 import dwz.persistence.BaseConditionVO;
 import dwz.web.BaseController;
 
-@Controller("management.userController")
-@RequestMapping(value="/management/user")
+@Controller
+@RequestMapping("/management/base/user")
 public class UserController extends BaseController{
 	@Autowired
 	private UserServiceMgr userMgr;
@@ -34,7 +34,7 @@ public class UserController extends BaseController{
 		model.addAttribute("userStatusList", UserStatus.values());
 		model.addAttribute("pageSize", vo.getPageSize());
 
-		return "/management/user/list";
+		return "/management/base/user/list";
 	}
 	
 	@RequestMapping("/add")

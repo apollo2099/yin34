@@ -19,7 +19,7 @@ public class IndexController extends BaseController{
 
 		model.addAttribute("now", new Date());
 		
-		return "/management/mainfream/index_menu";
+		return "/management/mainfream/index_index";
 	}
 
 	
