@@ -81,7 +81,7 @@ public class AppConfiguration {
 		if (oNames == null) {
 			return;
 		}
-		this.webTemplateMap  = new TreeMap<String, dwz.business.website.Template>();
+//		this.webTemplateMap  = new TreeMap<String, dwz.business.website.Template>();
 
 		Collection<String> templateNames = null;
 		if (!(oNames instanceof Collection)) {
@@ -93,7 +93,7 @@ public class AppConfiguration {
 
 		int i = 0;
 		for (String templateName : templateNames) {
-			dwz.business.website.Template template = null;
+//			dwz.business.website.Template template = null;
 
 			String templateLabel = this.conf
 					.getString("web-template-list.template(" + i + ").label");
@@ -110,7 +110,7 @@ public class AppConfiguration {
 			properties.put("prePicBase", prePicBase);
 			properties.put("prePicExt", prePicExt);
 
-			template = WebSiteUtils.buildTemplate(properties);
+//			template = WebSiteUtils.buildTemplate(properties);
 
 			Object oLayoutNames = this.conf
 					.getProperty("web-template-list.template(" + i
@@ -140,7 +140,7 @@ public class AppConfiguration {
 				} catch (Exception ex) {
 					ex.printStackTrace();
 				}
-				template.addLayout(layoutName, css, index, desc);
+//				template.addLayout(layoutName, css, index, desc);
 				j++;
 			}
 
@@ -159,11 +159,11 @@ public class AppConfiguration {
 				String label = this.conf.getString("web-template-list.template(" + i + ").theme-list.theme(" + k + ").label");
 				String desc = this.conf.getString("web-template-list.template(" + i + ").theme-list.theme(" + k + ").description");
 
-				template.addTheme(themeName, css, label, desc);
+//				template.addTheme(themeName, css, label, desc);
 				k++;
 			}
 
-			this.webTemplateMap .put(templateName, template);
+//			this.webTemplateMap .put(templateName, template);
 			i++;
 		}
 		properties.clear();
@@ -222,15 +222,15 @@ public class AppConfiguration {
 			this.conf.clear();
 			this.conf = null;
 		}
-		if (this.webTemplateMap != null) {
-			this.webTemplateMap.clear();
-			this.webTemplateMap = null;
-		}
+//		if (this.webTemplateMap != null) {
+//			this.webTemplateMap.clear();
+//			this.webTemplateMap = null;
+//		}
 	}
 
-	public Map<String, dwz.business.website.Template> getWebTemplateMap(){
-		return webTemplateMap;
-	}
+//	public Map<String, dwz.business.website.Template> getWebTemplateMap(){
+//		return webTemplateMap;
+//	}
 	
 	public String getStaticServer() {
 		return this.conf.getString("app.server.static");

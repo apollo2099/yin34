@@ -9,13 +9,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-
-import dwz.business.website.WebsiteServiceMgr;
 import dwz.framework.context.AppContext;
 import dwz.framework.context.AppContextHolder;
 import dwz.framework.context.DefaultAppContext;
 import dwz.framework.identity.Validator;
-import dwz.framework.sys.business.BusinessFactory;
 
 public class WebsiteContextFilter implements Filter {
 
@@ -65,8 +62,8 @@ public class WebsiteContextFilter implements Filter {
 			AppContextHolder.setContext(context);
 		}
 
-		WebsiteServiceMgr websiteMgr = BusinessFactory.getInstance().getService(WebsiteServiceMgr.SERVICE_NAME);
-		context.setWebsite(websiteMgr.getWebsite());
+//		WebsiteServiceMgr websiteMgr = BusinessFactory.getInstance().getService(WebsiteServiceMgr.SERVICE_NAME);
+//		context.setWebsite(websiteMgr.getWebsite());
 		
 		chain.doFilter(req, res);
 
